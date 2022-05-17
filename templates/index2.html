@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- <h1>We are in block head</h1> -->
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <h1>Please fill the form: </h1>
+    <form method="post" action="{{ url_for('emp') }}">
+
+
+
+        <label for="projects">Number of projects: </label>
+        <input type="text" name = 'projects' placeholder="eg. 5, 7, 12"><br><br>
+    
+        <label for="hours">Monthly hours: </label>
+        <input type="text" name = "hours" placeholder="eg. 256, 356"><br><br>
+    
+        <label for="time">Time spent in company(in years): </label>
+        <input type="text" name="time" placeholder="eg. 2, 3"><br><br>
+    
+        <p>Work accident happend:</p>
+        <label for="accident">Yes</label>
+        <input type="radio" name="accident" id="yes" value="1">
+        <label for="accident">No</label>
+        <input type="radio" name="accident" id="no" value="0"><br>
+        
+        <p>Did he/she get any promotion in last 5 years: </p>
+        <label for="promotion">Yes</label>
+        <input type="radio" name="promotion" id="yes" value="1">
+    
+        <label for="promotion">No</label>
+        <input type="radio" name="promotion" id="no" value="0"><br><br>
+        
+        <label for="prev_satisfaction">Satisfaction level when it was evaluated last time: </label>
+        <input type="text" name="prev_satisfaction" placeholder="from 0-1, eg. 0.19, 0.89"><br><br>
+    
+        <label for="satisfaction">Current satisfaction level: </label>
+        <input type="text" name="satisfaction" placeholder="from 0-1, eg. 0.19, 0.89"><br><br>
+    
+    
+        <p>Salary Level: </p>
+        <label for="salary">Low</label>
+        <input type="radio" name="salary" id="low" value="1">
+    
+        <label for="salary">Medium</label>
+        <input type="radio" name="salary" id="medium" value="2">
+        
+        <label for="salary">High</label>
+        <input type="radio" name="salary" id="high" value="0"><br><br>
+    
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="7">Sales</option>
+            <option value="9">Technical</option>
+            <option value="8">Support</option>
+            <option value="0">IT</option>
+            <option value="6">Product Management</option>
+            <option value="5">Marketing</option>
+            <option value="1">R&D</option>
+            <option value="2">Accounting</option>
+            <option value="3">HR</option>
+            <option value="4">Management</option>
+        </select><br><br>
+    
+        <input type="submit" value='predict'>
+
+
+        
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.profile-icon{
+    width: 25px;
+}
+
+.right-opt{
+    align-self: flex-end;
+    justify-content: space-between;
+    margin-right: -1px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color: #fff;
+}

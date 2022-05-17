@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %} {% endblock %}
+
+{% block body %}
+<br><br>
+<div class="container">
+
+    <h2>Prediction on your input: </h1><br>
+    
+    {% if data == 1 %}
+        
+        <h1>Employee will leave!...</h1>
+    
+    {% else %}
+    
+        <h1>Employee will stay!...</h1>
+    
+    {% endif %}
+    
+    <!-- <a href="/">Back to home page..</a> -->
+    <button type="button" class="btn btn-dark"><a href="/">Back to home page..</a></button>
+
+</div>
+
+{% endblock %}

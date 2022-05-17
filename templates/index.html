@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- <h1>We are in block head</h1> -->
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <h1>Please fill the form: </h1>
+    <form method="post" action="{{ url_for('emp') }}" class="row g-3">
+
+
+        <div class="col-md-4">
+            <label for="projects" class="form-label">Number of projects: </label>
+            <input type="text" name='projects' placeholder="eg. 5, 7, 12" class="form-control">
+        </div>
+
+        <div class="col-md-4">
+            <label for="hours" class="form-label">Monthly hours: </label>
+            <input type="text" name="hours" placeholder="eg. 256, 356" class="form-control">
+        </div>
+
+        <div class="col-md-4">
+            <label for="time" class="form-label">Time spent in company(in years): </label>
+            <input type="text" name="time" placeholder="eg. 2, 3" class="form-control">
+        </div>
+
+        <div class="col-md-6">
+            <p>Any work accident happend?</p>
+            <input type="radio" name="accident" id="yes" value="1" class="form-check-input">
+            <label for="accident" class="form-check-label">Yes</label>
+            <input type="radio" name="accident" id="no" value="0" class="form-check-input">
+            <label for="accident" class="form-check-label">No</label>
+        </div>
+
+        <div class="col-md-4">
+            <p>Did he/she get any promotion in last 5 years: </p>
+            <input type="radio" name="promotion" id="yes" value="1" class="form-check-input">
+            <label for="promotion" class="form-check-label">Yes</label>
+            <input type="radio" name="promotion" id="no" value="0" class="form-check-input">
+            <label for="promotion" class="form-check-label">No</label>
+        </div>
+
+        <div class="col-md-6">
+            <label for="prev_satisfaction" class="form-label">Satisfaction level when it was evaluated last time: </label>
+            <input type="text" name="prev_satisfaction" placeholder="from 0-1, eg. 0.19, 0.89" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label for="satisfaction" class="form-label">Current satisfaction level: </label>
+            <input type="text" name="satisfaction" placeholder="from 0-1, eg. 0.19, 0.89" class="form-control">
+        </div>
+
+        <div class="col-md-8">
+            <p>Salary Level: </p>
+            <input type="radio" name="salary" id="low" value="1" class="form-check-input">
+            <label for="salary" class="form-check-label">Low</label>
+    
+            <input type="radio" name="salary" id="medium" value="2" class="form-check-input">
+            <label for="salary" class="form-check-label">Medium</label>
+    
+            <input type="radio" name="salary" id="high" value="0" class="form-check-input">
+            <label for="salary" class="form-check-label">High</label>
+        </div>
+
+        <div class="col-md-6">
+            <label for="department" class="form-label">Department:</label>
+            <select id="department" name="department" class="form-select">
+                <option value="7">Sales</option>
+                <option value="9">Technical</option>
+                <option value="8">Support</option>
+                <option value="0">IT</option>
+                <option value="6">Product Management</option>
+                <option value="5">Marketing</option>
+                <option value="1">R&D</option>
+                <option value="2">Accounting</option>
+                <option value="3">HR</option>
+                <option value="4">Management</option>
+            </select>    
+            <br>
+        </div>
+        
+        <input type="submit" value='Predict' class="btn btn-dark">
+
+
+
+    </form>
+
+</div>
+{% endblock %}
